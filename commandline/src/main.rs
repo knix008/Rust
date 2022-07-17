@@ -1,7 +1,7 @@
 use std::env;
 use std::str::FromStr;
 
-fn gcd(mut n: u64, mut m: u64) -> u64 {
+pub fn gcd(mut n: u64, mut m: u64) -> u64 {
     assert!(n != 0 && m != 0);
     while m != 0 {
         if m < n {
@@ -23,9 +23,9 @@ fn main() {
         eprintln!("Usage: gcd NUMBER ...");
         std::process::exit(1);
     }
-    let mut d = numbers[0];
+    let d = numbers[0];
     for m in &numbers[1..] {
-        d = gcd(d, *m);
+        gcd(d, *m);
     }
     println!("The greatest common divisor of {:?} is {}", numbers, d);
 }
