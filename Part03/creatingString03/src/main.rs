@@ -1,0 +1,16 @@
+#![allow(unused_mut)]
+#![allow(unused_variables)]
+#![allow(non_snake_case)]
+
+fn main() {
+    let hello = String::from("Dobrý den");
+    let hello = String::from("Hello");
+    let hello = String::from("नमस्ते");
+    let hello = String::from("こんにちは");
+    let hello = String::from("你好");
+    let hello = String::from("Olá");
+    let hello = String::from("Здравствуйте");
+    let hello = String::from("Hola");
+    let hello = String::from("안녕하세요");
+    println!("The hello string : {}", hello);
+}
