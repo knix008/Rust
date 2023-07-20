@@ -1,13 +1,33 @@
+#![allow(non_snake_case)]
 #![allow(unused_variables)]
 
-fn longest<'a>(x: &'a str, y: &str) -> &'a str {
-    x
+#[derive(Debug)]
+struct ImportantExcerpt<'a> {
+    part: &'a str,
+}
+
+impl<'a> ImportantExcerpt<'a> {
+    fn level(&self) -> i32 {
+        3
+    }
+}
+
+impl<'a> ImportantExcerpt<'a> {
+    fn announce_and_return_part(&self, announcement: &str) -> &str {
+        println!("Attention please: {}", announcement);
+        self.part
+    }
 }
 
 fn main() {
-    let string1 = String::from("long string is long");
-    let string2 = String::from("xyz");
+    let novel = String::from("Call me Ishmael. Some years ago...");
+    let first_sentence = novel.split('.').next().expect("Could not find a '.'");
+    let excerpt = ImportantExcerpt { part: first_sentence };
+    let level = excerpt.level();
 
-    let result = longest(string1.as_str(), string2.as_str());
-    println!("The longest string is {}", result);
+    println!("The excerpt : {:?}.", excerpt);
+    println!("The level : {}.", level);
+
+    let announce = excerpt.announce_and_return_part(&first_sentence);
+    println!("The announce : {}.", announce);
 }
