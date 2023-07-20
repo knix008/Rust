@@ -14,8 +14,8 @@ fn main() {
     println!("The longest string is {}.", result);
     println!("The string1 address : {:p}.", &string1);
     println!("The string1 address : {:p}.", &string2);
-    println!("The result  address : {:p}.", result);
+    println!("The result  address : {:p}.", &result);
     result = "abc";
-    println!("The result  address : {:p}.", result);
+    println!("The result  address : {:p}.", &result);
     println!("The string of result: {}.", result);
 }
