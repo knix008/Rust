@@ -7,9 +7,9 @@ pub struct Guess {
 impl Guess {
     pub fn new(value: i32) -> Guess {
         if value < 1 {
-            panic!("Guess value must be greater than or equal to 1, got {}.", value);
+            panic!("Guess value must be more than or equal to 1, got {}.", value);
         } else if value > 100 {
-            panic!("Guess value must be less than or equal to 100, got {}.", value);
+            panic!("Guess value must be less than or equal to 100, got {}", value);
         }
         Guess {
             value,
@@ -27,9 +27,9 @@ mod tests {
         Guess::new(200);
     }
 
-//    #[test]
-//    #[should_panic(expected = "Guess value must be less than or equal to 100")]
-//    fn less_than_100() {
-//        Guess::new(50);
-//    }
+    //    #[test]
+    //    #[should_panic(expected = "Guess value must be less than or equal to 100")]
+    //    fn less_than_100() {
+    //        Guess::new(50);
+    //    }
 }
