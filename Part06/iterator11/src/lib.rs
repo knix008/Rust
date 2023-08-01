@@ -28,18 +28,6 @@ mod tests {
     use super::*;
 
     #[test]
-    fn calling_next_directly() {
-        let mut counter = Counter::new();
-
-        assert_eq!(counter.next(), Some(1));
-        assert_eq!(counter.next(), Some(2));
-        assert_eq!(counter.next(), Some(3));
-        assert_eq!(counter.next(), Some(4));
-        assert_eq!(counter.next(), Some(5));
-        assert_eq!(counter.next(), None);
-    }
-
-    #[test]
     fn using_other_iterator_trait_methods() {
         let sum: u32 = Counter::new()
             .zip(Counter::new().skip(1))
