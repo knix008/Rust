@@ -1,7 +1,10 @@
 [package]
 name = "my_art"
-license = "MIT"
 version = "0.1.0"
+authors = ["Victor Kwon<suho.kwon@gmail.com>"]
+description = "This is just for testing 'cargo publish' command."
+repository = "https://github.com/knix008/Rust"
+license = "MIT OR Apache-2.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
