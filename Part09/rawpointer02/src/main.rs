@@ -3,5 +3,4 @@ fn main() {
     let r = address as *const i32;
 
     println!("The R : {:?}", r);
-
 }
